@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %} Editar Producto {% endblock %}
+
+{% block content %}
+<h2 align="center">Editar Producto!</h2>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">GUARDAR</button>
+            <a class="btn btn-danger" href="/inicio/">CANCELAR</a>
+        </form>
+    </div>
+    <div class="col-2"></div>
+
+</div>
+
+{% endblock %}
